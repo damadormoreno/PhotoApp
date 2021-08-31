@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.photos.DetailPhotoFragment">
+
+    <ImageView
+        android:id="@+id/imageDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="32dp"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="75dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleImageProfileCard"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/circleImageProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#292929"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageProfileCard"
+            app:layout_constraintStart_toEndOf="@+id/circleImageProfileCard"
+            app:layout_constraintTop_toTopOf="@+id/circleImageProfileCard" />
+
+        <ImageView
+            android:id="@+id/instagramImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_instagram"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageProfileCard" />
+
+        <TextView
+            android:id="@+id/instagramName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#292929"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/instagramImage"
+            app:layout_constraintStart_toEndOf="@+id/circleImageProfileCard"
+            app:layout_constraintTop_toTopOf="@+id/instagramImage" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="#A3A3A3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/instagramName" />
+
+        <ImageView
+            android:id="@+id/cameraImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            android:src="@drawable/ic_baseline_photo_camera_24"/>
+
+        <TextView
+            android:id="@+id/cameraModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#292929"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cameraImage"
+            app:layout_constraintStart_toEndOf="@+id/cameraImage"
+            app:layout_constraintTop_toTopOf="@+id/cameraImage" />
+
+        <TextView
+            android:id="@+id/cameraIso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#292929"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/cameraImage"
+            app:layout_constraintLeft_toRightOf="@+id/cameraImage"/>
+        <TextView
+            android:id="@+id/cameraAperture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#292929"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/cameraIso"
+            app:layout_constraintLeft_toRightOf="@+id/cameraImage"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
